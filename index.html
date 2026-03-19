@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>2048 Ultimate</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>2048 Ultimate</h1>
+
+<div class="top-bar">
+  <div>Score: <span id="score">0</span></div>
+  <div>High Score: <span id="highScore">0</span></div>
+</div>
+
+<div class="controls">
+  <button onclick="undo()">Undo</button>
+  <select id="sizeSelect" onchange="changeSize()">
+    <option value="4">4x4</option>
+    <option value="5">5x5</option>
+    <option value="6">6x6</option>
+  </select>
+  <button onclick="toggleShop()">Shop</button>
+</div>
+
+<div id="shop" class="hidden">
+  <h3>Theme Shop</h3>
+  <button onclick="setTheme('classic')">Classic</button>
+  <button onclick="setTheme('blue')">Blue</button>
+  <button onclick="setTheme('dark')">Dark</button>
+</div>
+
+<div id="game"></div>
+
+<script src="game.js"></script>
+</body>
+</html>
